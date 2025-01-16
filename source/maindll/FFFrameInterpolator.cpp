@@ -339,7 +339,11 @@ FfxErrorCode FFFrameInterpolator::CreateBackend(NGXInstanceParameters *NGXParame
 	if (status != FFX_OK)
 		return status;
 
-	status = m_SharedBackendInterface.fpCreateBackendContext(&m_SharedBackendInterface, nullptr, &m_SharedEffectContextId.emplace());
+	status = m_SharedBackendInterface.fpCreateBackendContext(
+		&m_SharedBackendInterface,
+		FfxEffect::FFX_EFFECT_SHAREDRESOURCES,
+		nullptr,
+		&m_SharedEffectContextId.emplace());
 
 	if (status != FFX_OK)
 	{
