@@ -1,0 +1,3 @@
+[submodule "dependencies/FidelityFX-SDK"]
+	path = dependencies/FidelityFX-SDK
+	url = https://github.com/remileduc/FidelityFX-SDK.git
